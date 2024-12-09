@@ -1,8 +1,6 @@
 import axios from "axios";
-const LIST_ID = '901604956254'
 
 export default defineEventHandler(async (event) => {
-    console.log(process.env.CLICKUP_LIST_ID, "CLICKUP_LIST_ID")
 
     try {
         // Parse the incoming JSON body
@@ -29,7 +27,7 @@ export default defineEventHandler(async (event) => {
 
         // ClickUp API details from environment variables
         const listId = '901604956254';
-        const apiToken = 'pk_55289378_CMDSU7G0B4GOPHB83WVV92JOL73ELHDC';
+        const apiToken = CLICKUP_TOKEN;
         // Send data to ClickUp
         await axios.post(
             `https://api.clickup.com/api/v2/list/${listId}/task`,
