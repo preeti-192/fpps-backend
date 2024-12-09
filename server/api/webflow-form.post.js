@@ -1,9 +1,4 @@
-// server/api/webflow-form.post.js
-
 import axios from "axios";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 export default defineEventHandler(async (event) => {
     try {
