@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
             {
                 headers: {
                     Authorization: apiToken,
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json", 
                 },
             }
         );
