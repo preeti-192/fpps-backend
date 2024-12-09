@@ -19,15 +19,13 @@ export default defineEventHandler(async (event) => {
         };
 
         // Get the runtime config
-        const {
-            CLICKUP_TOKEN,
-        } = useRuntimeConfig();
-
-        console.log(CLICKUP_TOKEN, "CLICKUP_TOKEN")
+        // const {
+        //     CLICKUP_TOKEN,
+        // } = useRuntimeConfig();
 
         // ClickUp API details from environment variables
         const listId = '901604956254';
-        const apiToken = CLICKUP_TOKEN;
+        const apiToken = 'pk_55289378_CMDSU7G0B4GOPHB83WVV92JOL73ELHDC';
         // Send data to ClickUp
         await axios.post(
             `https://api.clickup.com/api/v2/list/${listId}/task`,
