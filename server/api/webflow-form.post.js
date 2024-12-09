@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
 
         // Map Webflow form fields to ClickUp task fields
         const taskData = {
-            name: `Form Submission: ${body.data["Name"]}`,
+            name: `Form Submission: ${body.data["FirstName"]} ${body.data["LastName"]}`,
             description: `**Name**: ${body.data["FirstName"]} ${body.data["LastName"]}\n**Phone**: ${body.data["Phone"]}\n**Message**: ${body.data["Message"]}\n**Address**: ${body.data["address"]}\n**State**: ${body.data["state"]}`,
             status: "to do",
             assignees: [5496465],
@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
             {
                 headers: {
                     Authorization: apiToken,
-                    "Content-Type": "application/json", 
+                    "Content-Type": "application/json",
                 },
             }
         );
