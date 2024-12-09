@@ -4,5 +4,5 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     CLICKUP_TOKEN: process.env.CLICKUP_API_TOKEN,
-  },
+  }, 
 })
