@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
             name: `Form Submission: ${body.data["Name"]}`,
             description: `**Email**: ${body.data["Email"]}\n**Phone**: ${body.data["Phone"]}\n**Message**
             : ${body.data["Message"]}: ${body.data["address"]}\n**address**: ${body.data["state"]}\n**state**`,
-            status: "Open",
+            status: "to do",
             assignees: [5496465],
             priority: 1,
             start_date: currentDate,
