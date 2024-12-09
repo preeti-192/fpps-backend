@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
         console.log(CLICKUP_TOKEN, "CLICKUP_TOKEN")
 
         // ClickUp API details from environment variables
-        const listId = LIST_ID;
+        const listId = '901604956254';
         const apiToken = 'pk_55289378_CMDSU7G0B4GOPHB83WVV92JOL73ELHDC';
         // Send data to ClickUp
         await axios.post(
