@@ -11,21 +11,21 @@ export default defineEventHandler(async (event) => {
         const taskData = {
             name: `Form Submission: ${body.data["Name"]}`,
             description: `**Email**: ${body.data["Email"]}\n**Phone**: ${body.data["Phone"]}\n**Message**
-            : ${body.data["Message"]}`,
-            status: "open",
+            : ${body.data["Message"]}: ${body.data["address"]}\n**address**: ${body.data["state"]}\n**state**`,
+            status: "Open",
             assignees: [5496465],
             priority: 1,
             start_date: currentDate,
         };
 
         // Get the runtime config
-        // const {
-        //     CLICKUP_TOKEN,
-        // } = useRuntimeConfig();
+        const {
+            CLICKUP_TOKEN,
+        } = useRuntimeConfig();
 
         // ClickUp API details from environment variables
         const listId = '901604956254';
-        const apiToken = 'pk_55289378_CMDSU7G0B4GOPHB83WVV92JOL73ELHDC';
+        const apiToken = CLICKUP_TOKEN;
         // Send data to ClickUp
         await axios.post(
             `https://api.clickup.com/api/v2/list/${listId}/task`,
