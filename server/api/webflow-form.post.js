@@ -10,8 +10,7 @@ export default defineEventHandler(async (event) => {
         // Map Webflow form fields to ClickUp task fields
         const taskData = {
             name: `Form Submission: ${body.data["Name"]}`,
-            description: `**Email**: ${body.data["Email"]}\n**Phone**: ${body.data["Phone"]}\n**Message**
-            : ${body.data["Message"]}\n**Address**: ${body.data["address"]}\n**State**: ${body.data["state"]}`,
+            description: `**Name**: ${body.data["name"]}\n**Phone**: ${body.data["Phone"]}\n**Message**: ${body.data["Message"]}\n**Address**: ${body.data["address"]}\n**State**: ${body.data["state"]}`,
             status: "to do",
             assignees: [5496465],
             priority: 1,
