@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  server: {
-    port: 4000, // Change to any available port
+  runtimeConfig: {
+    CLICKUP_TOKEN: process.env.CLICKUP_API_TOKEN,
   },
 })
