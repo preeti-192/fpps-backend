@@ -12,9 +12,8 @@ export default defineEventHandler(async (event) => {
             description: `**Email**: ${body.data["Email"]}\n**Phone**: ${body.data["Phone"]}\n**Message**: ${body.data["Message"]}`,
             status: "to do",
             assignees: [5496465],
-            priority: 2,
+            priority: 1,
             start_date: currentDate,
-            due_date: currentDate,
         };
 
         // ClickUp API details from environment variables
